@@ -1,0 +1,121 @@
+<div class="container">
+    <h3>add food order</h3>
+    <form #addData = "ngForm" (ngSubmit)="addOrder(addData)">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="status"
+          name="status"
+          ngModel
+          #status="ngModel"
+          placeholder="Enter status"
+          [(ngModel)]="order1.status"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="customerName"
+          name="customerName"
+          ngModel
+          #customerName="ngModel"
+          placeholder="Enter name"
+          [(ngModel)]="order1.customerName"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="orderCreatedTime"
+          name="orderCreatedTime"
+          ngModel
+          #orderCreatedTime="ngModel"
+          placeholder="Enter time created"
+          [(ngModel)]="order1.orderCreatedTime"
+        />
+      </div>
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="orderDeliveryTime"
+          name="orderDeliveryTime"
+          ngModel
+          #orderDeliveryTime="ngModel"
+          placeholder="Enter time delivered"
+          [(ngModel)]="order1.orderDeliveryTime"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="customerEmailId"
+          name="customerEmailId"
+          ngModel
+          #customerEmailId="ngModel"
+          placeholder="Enter email"
+          [(ngModel)]="order1.customerEmailId"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="contactNumber"
+          name="contactNumber"
+          ngModel
+          #contactNumber="ngModel"
+          placeholder="Enter phone number"
+          [(ngModel)]="order1.contactNumber"
+        />
+      </div>
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="totalPrice"
+          name="totalPrice"
+          ngModel
+          #totalPrice="ngModel"
+          placeholder="Enter price"
+          [(ngModel)]="order1.totalPrice"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="staff_id"
+          name="staff_id"
+          ngModel
+          #staff_id="ngModel"
+          placeholder="Enter staff id"
+          [(ngModel)]="order1.staff.id"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="branch_id"
+          name="branch_id"
+          ngModel
+          #branch_id="ngModel"
+          placeholder="Enter branch id"
+          [(ngModel)]="order1.branch.id"
+        />
+      </div>
+      
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

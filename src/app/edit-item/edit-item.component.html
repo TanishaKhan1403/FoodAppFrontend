@@ -1,0 +1,81 @@
+<div class="container">
+    <h4>edit admin here</h4>
+    <form #addData="ngForm" (ngSubmit)="editItem(addData)">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          ngModel
+          #name="ngModel"
+         
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="type"
+          name="type"
+          ngModel
+          #type="ngModel"
+        
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="quantity"
+          name="quantity"
+          ngModel
+          #quantity="ngModel"
+         
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="productId"
+          name="productId"
+          ngModel
+          #productId="ngModel"
+         
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          name="price"
+          ngModel
+          #price="ngModel"
+          
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          name="image"
+          ngModel
+          #image="ngModel"
+          
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+      
+  
+      
+  
+
+

@@ -1,0 +1,54 @@
+<div class="container">
+  <h4>edit admin here</h4>
+  <form #addData="ngForm" (ngSubmit)="editBranch(addData)">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        ngModel
+        #name="ngModel"
+        [(ngModel)]="branch1.name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="text-area"
+        class="form-control"
+        id="address"
+        name="address"
+        ngModel
+        #address="ngModel"
+        [(ngModel)]="branch1.address"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="phoneNumber"
+        name="phoneNumber"
+        ngModel
+        #phoneNumber="ngModel"
+        [(ngModel)]="branch1.phoneNumber"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        ngModel
+        #email="ngModel"
+        [(ngModel)]="branch1.email"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

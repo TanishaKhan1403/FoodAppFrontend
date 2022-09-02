@@ -1,0 +1,81 @@
+<div class="container">
+    <h3>add item</h3>
+    <form #addData = "ngForm" (ngSubmit)="addItem(addData)">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          ngModel
+          #name="ngModel"
+          placeholder="Enter name"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="type"
+          name="type"
+          ngModel
+          #type="ngModel"
+          placeholder="Enter type"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="quantity"
+          name="quantity"
+          ngModel
+          #quantity="ngModel"
+          placeholder="Enter quantity"
+        />
+      </div>
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="productId"
+          name="productId"
+          ngModel
+          #productId="ngModel"
+          placeholder="Enter product id"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          name="price"
+          ngModel
+          #price="ngModel"
+          placeholder="Enter price"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          name="image"
+          ngModel
+          #image="ngModel"
+          placeholder="Enter image"
+        />
+      </div>
+
+    
+      
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+

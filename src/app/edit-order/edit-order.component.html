@@ -1,0 +1,88 @@
+<div class="container">
+    <h4>edit admin here</h4>
+    <form #addData="ngForm" (ngSubmit)="editOrder(addData)">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="status"
+          name="status"
+          ngModel
+          #status="ngModel"
+          [(ngModel)]="order1.status"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="customerName"
+          name="customerName"
+          ngModel
+          #customerName="ngModel"
+          [(ngModel)]="order1.customerName"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="orderCreatedTime"
+          name="orderCreatedTime"
+          ngModel
+          #orderCreatedTime="ngModel"
+          [(ngModel)]="order1.orderCreatedTime"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="orderDeliveryTime"
+          name="orderDeliveryTime"
+          ngModel
+          #orderCreatedTime="ngModel"
+          [(ngModel)]="order1.orderDeliveryTime"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="customerEmailId"
+          name="customerEmailId"
+          ngModel
+          #customerEmailId="ngModel"
+          [(ngModel)]="order1.customerEmailId"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="contactNumber"
+          name="contactNumber"
+          ngModel
+          #contactNumber="ngModel"
+          [(ngModel)]="order1.contactNumber"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="totalPrice"
+          name="totalPrice"
+          ngModel
+          #totalPrice="ngModel"
+          [(ngModel)]="order1.totalPrice"
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

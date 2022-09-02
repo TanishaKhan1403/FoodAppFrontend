@@ -1,0 +1,99 @@
+<div class="container">
+    <h3>add food product</h3>
+    <form #addData = "ngForm" (ngSubmit)="addProduct(addData)">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          ngModel
+          #name="ngModel"
+          placeholder="Enter name"
+          [(ngModel)]="product1.name"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="type"
+          name="type"
+          ngModel
+          #type="ngModel"
+          placeholder="Enter type"
+          [(ngModel)]="product1.type"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="about"
+          name="about"
+          ngModel
+          #about="ngModel"
+          placeholder="Enter about food"
+          [(ngModel)]="product1.about"
+        />
+      </div>
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          name="price"
+          ngModel
+          #price="ngModel"
+          placeholder="Enter price"
+          [(ngModel)]="product1.price"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="availability"
+          name="availability"
+          ngModel
+          #availability="ngModel"
+          placeholder="Enter availability"
+          [(ngModel)]="product1.availability"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="quantity"
+          name="quantity"
+          ngModel
+          #quantity="ngModel"
+          placeholder="Enter quantity"
+          [(ngModel)]="product1.quantity"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="menu_id"
+          name="menu_id"
+          ngModel
+          #menu_id="ngModel"
+          placeholder="Enter menu id"
+          [(ngModel)]="product1.menu.id"
+        />
+      </div>
+
+
+    
+      
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

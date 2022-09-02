@@ -1,0 +1,21 @@
+<div class="container">
+    <h4>edit admin here</h4>
+    <form #addData="ngForm" (ngSubmit)="editAdmin(addData)">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="name" name="name" ngModel #name="ngModel"  [(ngModel)]="admin1.name">
+        </div>
+    
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email" name="email" ngModel #email="ngModel" [(ngModel)]="admin1.email">
+          </div>
+      
+          
+          <div class="mb-3">
+            <input type="password" class="form-control" id="password" name="password" ngModel #password="ngModel"  [(ngModel)]="admin1.password">
+          </div>
+       
+          
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>

@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Food App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Login</a>
+          <div class="dropdown-menu">
+            <a routerLink="admin-login" class="dropdown-item" href="#">Admin</a>
+            <a routerLink="branch-manager-login" class="dropdown-item" href="#">Branch Manager</a>
+            <a routerLink="staff-login" class="dropdown-item" href="#">Staff</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Registration</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-admin" class="nav-link" href="#">Register Admin</a>
+            <a routerLink="add-branchmanager" class="nav-link" href="#">Register Manager</a>
+            <a routerLink="add-staff" class="nav-link" href="#">Register Staff</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Admin</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-admin" class="nav-link" href="#">Save Admin</a>
+            <a routerLink="admin" class="nav-link" href="#">Admin details</a>
+            
+          </div>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Branch manager</a>
+            <div class="dropdown-menu">
+              <a routerLink="add-branchmanager" class="nav-link" href="#">Save Manager</a>
+              <a routerLink="branchmanager" class="nav-link" href="#">Manager details</a>
+            </div>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Staff</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-staff" class="nav-link" href="#">Save Staff</a>
+            <a routerLink="staff" class="nav-link" href="#">Staff details</a>
+            
+
+
+          </div>
+       
+        
+          
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Branch</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-branch" class="nav-link" href="#">Save Branch</a>
+            <a routerLink="branch" class="nav-link" href="#">Branch details</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Food Order</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-order" class="nav-link" href="#">Save Food Order</a>
+            <a routerLink="order" class="nav-link" href="#">Food Order details</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Product</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-product" class="nav-link" href="#">Save Product</a>
+            <a routerLink="product" class="nav-link" href="#">Product details</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Menu</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-menu" class="nav-link" href="#">Save Menu</a>
+            <a routerLink="menu" class="nav-link" href="#">Menu details</a>
+          </div>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Item</a>
+          <div class="dropdown-menu">
+            <a routerLink="add-item" class="nav-link" href="#">Save Item</a>
+            <a routerLink="item" class="nav-link" href="#">Item details</a>
+          </div>
+        </li>
+      
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+<router-outlet></router-outlet>

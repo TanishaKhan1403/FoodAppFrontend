@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>add menu</h3>
+    <form #addData = "ngForm" (ngSubmit)="addMenu(addData)">
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="branchmanager"
+          name="branchmanager"
+          ngModel
+          #branchmanager="ngModel"
+          placeholder="Enter branch manager Id"
+          [(ngModel)]="menu.branchmanager.id"
+        />
+      </div>
+  
+      
+      
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+
+

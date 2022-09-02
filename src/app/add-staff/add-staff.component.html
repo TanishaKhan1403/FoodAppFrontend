@@ -1,0 +1,58 @@
+<div class="container">
+  <h3>add staff</h3>
+  <form #addData="ngForm" (ngSubmit)="addStaff(addData)">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        
+        ngModel
+        name="name"
+        #name="ngModel"
+        placeholder="Enter admin name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        ngModel
+        name="email"
+        #email="ngModel"
+        placeholder="Enter email"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        
+        ngModel
+        name="password"
+        #password="ngModel"
+        placeholder="Enter password"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="role"
+        name="role"
+        ngModel
+        #role="ngModel"
+        placeholder="Enter role"
+      />
+    </div>
+
+
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

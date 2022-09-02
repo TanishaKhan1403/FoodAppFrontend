@@ -1,0 +1,68 @@
+<div class="container">
+  <h3>add branch manager</h3>
+  <form #addData = "ngForm" (ngSubmit)="addBranchmanager(addData)">
+    <!-- <div class="mb-3">
+      <input
+        type="number"
+        class="form-control"
+        id="menu"
+        name="menu"
+        ngModel
+        #menu="ngModel"
+        placeholder="Enter menu Id"
+        [(ngModel)]="branchmanager.menu.id"
+      />
+    </div> -->
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        ngModel
+        #name="ngModel"
+        placeholder="Enter name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        ngModel
+        #email="ngModel"
+        placeholder="Enter email"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        ngModel
+        #password="ngModel"
+        placeholder="Enter password"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="role"
+        name="role"
+        ngModel
+        #role="ngModel"
+        placeholder="Enter role"
+      />
+    </div>
+
+
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
