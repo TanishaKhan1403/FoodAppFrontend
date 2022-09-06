@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>add food order</h3>
+    <h3>Add Food Order</h3>
     <form #addData = "ngForm" (ngSubmit)="addOrder(addData)">
       <div class="mb-3">
         <input
@@ -101,18 +101,7 @@
           [(ngModel)]="order1.staff.id"
         />
       </div>
-      <div class="mb-3">
-        <input
-          type="number"
-          class="form-control"
-          id="branch_id"
-          name="branch_id"
-          ngModel
-          #branch_id="ngModel"
-          placeholder="Enter branch id"
-          [(ngModel)]="order1.branch.id"
-        />
-      </div>
+      
       
   
       <button type="submit" class="btn btn-primary">Submit</button>

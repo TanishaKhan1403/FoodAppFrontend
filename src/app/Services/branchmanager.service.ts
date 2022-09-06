@@ -35,7 +35,7 @@ export class BranchmanagerService {
   return localStorage.getItem('registeredRole');
  }
  login2(){
-  if( this.getRole()=='branch manager'){
+  if( this.getRole()==='branch manager'){
  
     return true;
   }

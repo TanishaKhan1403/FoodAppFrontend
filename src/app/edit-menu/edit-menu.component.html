@@ -1,1 +1,34 @@
-<p>edit-menu works!</p>
+<div class="container">
+  <h3>Item Menu here</h3>
+
+  <form #update="ngForm" (ngSubmit)="editMenu(update)">
+    <div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter menu name"
+          name="name"
+          #name="ngModel"
+          ngModel
+          [(ngModel)]="selectedMenu.name"
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="branchmanager"
+          placeholder="Enter manager id"
+          name="branchmanager"
+          #branchmanager="ngModel"
+          ngModel
+          [(ngModel)]="selectedMenu.branchmanager.id"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+</div>

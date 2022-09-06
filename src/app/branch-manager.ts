@@ -7,5 +7,6 @@ export class BranchManager {
   email!: string;
   password!: string;
   role!: string;
-  constructor() {}
+
+ constructor(){}
 }

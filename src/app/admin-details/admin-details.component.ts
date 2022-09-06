@@ -17,10 +17,11 @@ export class AdminDetailsComponent implements OnInit {
       console.log(this.result);
 });
   }
-  deleteAdmin(id:any){
-    this.admin.deleteData(id).subscribe((res)=>{
+  deleteAdmin(_id:any){
+    this.admin.deleteData(_id).subscribe((res)=>{
       console.log(res);
     });
 }
-
 }
+
+

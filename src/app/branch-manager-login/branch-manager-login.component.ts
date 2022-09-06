@@ -25,9 +25,9 @@ export class BranchManagerLoginComponent implements OnInit {
         this.registeredRole = this.result.role;
         this.branchmanagerId = this.result.id;
         console.log(res);
-        localStorage.setItem(' branchmanagerId', this.branchmanagerId);
+        localStorage.setItem('branchmanagerId', this.branchmanagerId);
         localStorage.setItem('registeredRole', this.registeredRole);
-        window.alert('Loggedd in');
+        window.alert('Logged in');
       },
       (error) => {
         alert('Invalid');

@@ -13,6 +13,8 @@ export class Foodproduct {
     price!:number
     quantity!:string
 
-    menu = new Menu()
+    menu=new Menu();
+
+   
 
 }

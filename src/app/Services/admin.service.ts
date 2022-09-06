@@ -21,31 +21,29 @@ export class AdminService {
   } 
   
   // deleting product using http detele methods 
-  deleteData(id:any){
-   return this.http.delete(`http://localhost:8080/api/deleteadmin/${id}`);
+  deleteData(_id:any){
+   return this.http.delete(`http://localhost:8080/api/deleteadmin/${_id}`);
   }
   
   //updating http method
   updateData(_id:any,admin:any){
-      return this.http.put(`http://localhost:8080/api/editadmin/${_id}`,admin);
+      return this.http.put(`http://localhost:8080/api/updateadmin/${_id}`,admin);
   }
-
   loginData(admin:any){
     return this.http.post("http://localhost:8080/api/getby",admin);
  } 
-
  getRole(){
   return localStorage.getItem('registeredRole');
+  
  }
- login1(){
+login1(){
+  if(this.getRole()=='admin'){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
-if( this.getRole()=='admin'){
- 
-  return true;
-}
-else{
-  return false;
-}
- }
 
 }

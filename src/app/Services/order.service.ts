@@ -26,4 +26,5 @@ export class OrderService {
   updateData(_id:any,order:any){
       return this.http.put(`http://localhost:8080/api/updatefoodorder/${_id}`,order);
   }
+  
 }

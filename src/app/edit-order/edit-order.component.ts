@@ -8,33 +8,32 @@ import { OrderService } from '../Services/order.service';
 @Component({
   selector: 'app-edit-order',
   templateUrl: './edit-order.component.html',
-  styleUrls: ['./edit-order.component.css']
+  styleUrls: ['./edit-order.component.css'],
 })
 export class EditOrderComponent implements OnInit {
-
-  constructor(private route:ActivatedRoute, private order:OrderService) { }
+  constructor(private route:ActivatedRoute,private order:OrderService) { }
   result:any;
-  order1 =new Foodorder()
-
+  selectedOrder= new Foodorder();
   ngOnInit(): void {
-    let id=this.route.snapshot.params['_id'];
-    
+    let id=this.route.snapshot.params['id'];
+    console.log("id from website "+id);
 
-    this.order.getData().subscribe((data: any)=>{
+    this.order.getData().subscribe((data)=>{
       this.result=data;
 
       for(let r of this.result.t){
-            if(id === r._id){
-                this.order1=r;
-                console.log(this.order1);
+            if(r.id == id){
+                this.selectedOrder=r;
+                console.log(this.selectedOrder);
             }
       }
     })
+
+  }
+
+  editOrder(form:NgForm){
+      this.order.updateData(this.selectedOrder.id,this.selectedOrder).subscribe((res: any)=>{
+        console.log(res);
+      })
+  }
 }
-
-
-editOrder(form:NgForm){
-    this.order.updateData(this.order1.id,form.value).subscribe((res: any)=>{
-      console.log(res);
-    })
-}}

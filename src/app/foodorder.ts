@@ -1,5 +1,6 @@
 import { Branch } from "./branch";
 import { BranchDetailsComponent } from "./branch-details/branch-details.component";
+import { OrderService } from "./Services/order.service";
 import { Staff } from "./staff";
 
 export class Foodorder {
@@ -12,7 +13,7 @@ export class Foodorder {
   customerName!: string;
   contactNumber!: string;
   customerEmailId!: string;
-  branch=new Branch;
-  staff=new Staff;
+ 
+  staff=new Staff();
 
 }

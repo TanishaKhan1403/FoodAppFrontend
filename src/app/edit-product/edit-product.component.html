@@ -1,5 +1,5 @@
 <div class="container">
-    <h4>edit admin here</h4>
+    <h3>Edit Product here</h3>
     <form #addData="ngForm" (ngSubmit)="editProduct(addData)">
       <div class="mb-3">
         <input
@@ -9,7 +9,8 @@
           name="name"
           ngModel
           #name="ngModel"
-          [(ngModel)]="product1.name"
+          placeholder="Enter name"
+          [(ngModel)]="selectedProduct.name"
         />
       </div>
   
@@ -21,7 +22,8 @@
           name="type"
           ngModel
           #type="ngModel"
-          [(ngModel)]="product1.type"
+          placeholder="Enter type"
+          [(ngModel)]="selectedProduct.type"
         />
       </div>
   
@@ -33,7 +35,8 @@
           name="about"
           ngModel
           #about="ngModel"
-          [(ngModel)]="product1.about"
+          placeholder="Enter about"
+          [(ngModel)]="selectedProduct.about"
         />
       </div>
   
@@ -45,7 +48,8 @@
           name="price"
           ngModel
           #price="ngModel"
-          [(ngModel)]="product1.price"
+          placeholder="Enter price"
+          [(ngModel)]="selectedProduct.price"
         />
       </div>
       <div class="mb-3">
@@ -56,7 +60,8 @@
           name="availability"
           ngModel
           #availability="ngModel"
-          [(ngModel)]="product1.availability"
+          placeholder="Enter availability"
+          [(ngModel)]="selectedProduct.availability"
         />
       </div>
       <div class="mb-3">
@@ -67,9 +72,23 @@
           name="quantity"
           ngModel
           #quantity="ngModel"
-          [(ngModel)]="product1.quantity"
+          placeholder="Enter quantity"
+          [(ngModel)]="selectedProduct.quantity"
         />
       </div>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="menu"
+          name="menu"
+          ngModel
+          #quantity="ngModel"
+          placeholder="Enter menu id"
+          [(ngModel)]="selectedProduct.menu.id"
+        />
+      </div>
+      
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>

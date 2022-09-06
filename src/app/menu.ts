@@ -1,7 +1,10 @@
 import { BranchManager } from "./branch-manager";
 
 export class Menu {
-    id:any;
+    id!:number;
+    name!:String;
+    
     branchmanager=new BranchManager();
+    constructor(){}
    
 }

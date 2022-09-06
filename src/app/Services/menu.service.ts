@@ -18,13 +18,13 @@ export class MenuService {
   } 
   
   // deleting product using http detele methods 
-  deleteData(_id:any){
-   return this.http.delete(`http://localhost:8080/api/deletemenu/${_id}`);
+  deleteData(id:any){
+   return this.http.delete(`http://localhost:8080/api/deletemenu/${id}`);
   }
   
   //updating http method
-  updateData(_id:any,menu:any){
-      return this.http.put(`http://localhost:8080/api/updatemenu/${_id}`,menu);
+  updateData(id:any,menu:any){
+      return this.http.put(`http://localhost:8080/api/updatemenu/${id}`,menu);
   }
 
 }

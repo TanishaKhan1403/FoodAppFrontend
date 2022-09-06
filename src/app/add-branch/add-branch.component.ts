@@ -9,14 +9,14 @@ import { BranchService } from '../Services/branch.service';
   styleUrls: ['./add-branch.component.css']
 })
 export class AddBranchComponent implements OnInit {
-  branch1=new Branch;
+  branch1=new Branch()
 
   constructor(private branch:BranchService) { }
-
-  ngOnInit(): void {}
-    addBranch(form:NgForm){
-      this.branch.addData(this.branch1).subscribe((data)=>{
-        console.log(data)
-       });
-       console.log(form.value);
-}}
+  ngOnInit(): void {
+  }
+  addBranch(form:NgForm){
+    this.branch.addData(this.branch1).subscribe((data)=>{
+     console.log(data)
+    });
+    console.log(form.value);
+ }}

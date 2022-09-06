@@ -39,6 +39,30 @@
         [(ngModel)]="selectedBranchmanager.password"
       />
     </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="role"
+        name="role"
+        ngModel
+        #password="ngModel"
+        placeholder="Enter role"
+        [(ngModel)]="selectedBranchmanager.role"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="menu"
+        name="menu"
+        ngModel
+        #menu="ngModel"
+        placeholder="Enter role"
+        [(ngModel)]="selectedBranchmanager.menu.id"
+      />
+    </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

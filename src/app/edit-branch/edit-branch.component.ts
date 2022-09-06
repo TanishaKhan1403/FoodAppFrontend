@@ -11,20 +11,20 @@ import { BranchService } from '../Services/branch.service';
 })
 export class EditBranchComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute, private branch:BranchService) { }
+  constructor(private route:ActivatedRoute,private branch:BranchService) { }
   result:any;
-  branch1 =new Branch()
+  selectedBranch= new Branch();
   ngOnInit(): void {
-    let id=this.route.snapshot.params['_id'];
-    
+    let id=this.route.snapshot.params['id'];
+    console.log("id from website "+id);
 
-    this.branch.getData().subscribe((data: any)=>{
+    this.branch.getData().subscribe((data)=>{
       this.result=data;
 
       for(let r of this.result.t){
-            if(id === r._id){
-                this.branch1=r;
-                console.log(this.branch1);
+            if(r.id == id){
+                this.selectedBranch=r;
+                console.log(this.selectedBranch);
             }
       }
     })
@@ -32,7 +32,7 @@ export class EditBranchComponent implements OnInit {
   }
 
   editBranch(form:NgForm){
-      this.branch.updateData(this.branch1.id,form.value).subscribe((res: any)=>{
+      this.branch.updateData(this.selectedBranch.id,this.selectedBranch).subscribe((res: any)=>{
         console.log(res);
       })
   }

@@ -11,31 +11,29 @@ import { ProductService } from '../Services/product.service';
 })
 export class EditProductComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute, private product:ProductService) { }
+  constructor(private route:ActivatedRoute,private product:ProductService) { }
+  result:any;
+  selectedProduct= new Foodproduct();
+  ngOnInit(): void {
+    let id=this.route.snapshot.params['id'];
+    console.log("id from website "+id);
 
-result:any;
- product1 =new Foodproduct()
- ngOnInit(): void {
-  let id=this.route.snapshot.params['_id'];
-  
+    this.product.getData().subscribe((data)=>{
+      this.result=data;
 
-  this.product.getData().subscribe((data: any)=>{
-    this.result=data;
+      for(let r of this.result.t){
+            if(r.id == id){
+                this.selectedProduct=r;
+                console.log(this.selectedProduct);
+            }
+      }
+    })
 
-    for(let r of this.result.t){
-          if(id === r._id){
-              this.product1=r;
-              console.log(this.product1);
-          }
-    }
-  })
-}
+  }
 
-
-editProduct(form:NgForm){
-  this.product.updateData(this.product1.id,form.value).subscribe((res: any)=>{
-    console.log(res);
-  })
-}
-
+  editProduct(form:NgForm){
+      this.product.updateData(this.selectedProduct.id,this.selectedProduct).subscribe((res: any)=>{
+        console.log(res);
+      })
+  }
 }

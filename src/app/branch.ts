@@ -1,9 +1,7 @@
-import { Admin } from "./admin";
-
+import { Admin } from './admin';
 
 export class Branch {
-  
-    admin = new Admin;
+  admin = new Admin();
   id!: number;
   name!: string;
   email!: string;

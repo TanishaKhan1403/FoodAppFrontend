@@ -1,76 +1,73 @@
 <div class="container">
-    <h3>add branch</h3>
-    <form #addData="ngForm" (ngSubmit)="addBranch(addData)">
-      <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          name="name"
-          ngModel
-          #name="ngModel"
-          placeholder="Enter name"
-          [(ngModel)]="branch1.name"
-        />
-      </div>
-  
-      <div class="mb-3">
-        <input
-          type="text-area"
-          class="form-control"
-          id="address"
-          name="address"
-          ngModel
-          #address="ngModel"
-          placeholder="Enter address"
-          [(ngModel)]="branch1.address"
-        />
-      </div>
-  
-      <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="phoneNumber"
-          name="phoneNumber"
-          ngModel
-          #phoneNumber="ngModel"
-          placeholder="Enter phone number"
-          [(ngModel)]="branch1.phoneNumber"
+  <h3>Add Branch</h3>
+  <form #addData = "ngForm" (ngSubmit)="addBranch(addData)">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        ngModel
+        #name="ngModel"
+        placeholder="Enter name"
+        [(ngModel)]="branch1.name"
+      />
+    </div>
 
-          
-        />
-      </div>
-      <div class="mb-3">
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          name="email"
-          ngModel
-          #address="ngModel"
-          placeholder="Enter email"
-          [(ngModel)]="branch1.email"
-        />
-      </div>
-      <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="admin_id"
-          name="admin_id"
-          ngModel
-          #admin_id="ngModel"
-          placeholder="Enter admin id"
-          [(ngModel)]="branch1.admin.id"
-        />
-      </div>
+    <div class="mb-3">
+      <input
+        type="text-area"
+        class="form-control"
+        id="address"
+        name="address"
+        ngModel
+        #address="ngModel"
+        placeholder="Enter address"
+        [(ngModel)]="branch1.address"
+      />
+    </div>
 
-     
-  
-      
-  
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
-  
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="phoneNumber"
+        name="phoneNumber"
+        ngModel
+        #phoneNumber="ngModel"
+        placeholder="Enter phone number"
+        [(ngModel)]="branch1.phoneNumber"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        ngModel
+        #email="ngModel"
+        placeholder="Enter email"
+        [(ngModel)]="branch1.email"
+      />
+    </div>
+    
+    <div class="mb-3">
+      <input
+        type="number"
+        class="form-control"
+        id="admin_id"
+        name="admin_id"
+        ngModel
+        #admin_id="ngModel"
+        placeholder="Enter admin id"
+        [(ngModel)]="branch1.admin.id"
+      />
+    </div>
+    
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

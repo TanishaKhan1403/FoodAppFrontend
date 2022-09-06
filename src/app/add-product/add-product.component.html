@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>add food product</h3>
+    <h3>Add Food Product</h3>
     <form #addData = "ngForm" (ngSubmit)="addProduct(addData)">
       <div class="mb-3">
         <input
@@ -80,14 +80,15 @@
         <input
           type="text"
           class="form-control"
-          id="menu_id"
-          name="menu_id"
+          id="menu"
+          name="menu"
           ngModel
-          #menu_id="ngModel"
+          #menu="ngModel"
           placeholder="Enter menu id"
           [(ngModel)]="product1.menu.id"
         />
       </div>
+      
 
 
     

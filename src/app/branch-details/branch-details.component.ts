@@ -18,8 +18,8 @@ export class BranchDetailsComponent implements OnInit {
       console.log(this.result);
     });
   }
-  deleteBranch(_id: any) {
-    this.branch.deleteData(_id).subscribe((res) => {
+  deleteBranch(id: any) {
+    this.branch.deleteData(id).subscribe((res) => {
       console.log(res);
     });
   }

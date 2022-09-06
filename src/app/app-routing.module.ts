@@ -31,6 +31,8 @@ import { EditBranchComponent } from './edit-branch/edit-branch.component';
 import { EditOrderComponent } from './edit-order/edit-order.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { MenuDetailsComponent } from './menu-details/menu-details.component';
+import { EditMenuComponent } from './edit-menu/edit-menu.component';
 
 const routes: Routes = [
   {path:"admin",component:AdminDetailsComponent},
@@ -42,7 +44,7 @@ const routes: Routes = [
   {path:"edit-branchmanager/:id",component:EditBranchManagerComponent},
   {path:"edit-staff/:id",component:EditStaffComponent},
   {path:"branchmanager",component:BranchManagerdetailsComponent,},
-  {path:"staff",component:StaffDetailsComponent,canActivate:[BranchmanagerGuardGuard]},
+  {path:"staff",component:StaffDetailsComponent,},
   {path:"admin-login",component:AdminLoginComponent},
   {path:"add-order",component: AddOrderComponent,canActivate:[StaffGuardGuard]},
   {path:"staff-login",component:StaffLoginComponent,},
@@ -58,7 +60,10 @@ const routes: Routes = [
   {path:"edit-branch/:id",component:EditBranchComponent},
   {path:"edit-order/:id",component:EditOrderComponent},
   {path:"edit-item/:id",component:EditItemComponent},
-  {path:"edit-product/:id",component:EditProductComponent}
+  {path:"edit-product/:id",component:EditProductComponent},
+  {path:"menu",component:MenuDetailsComponent,canActivate:[BranchmanagerGuardGuard]},
+  {path:"product",component:ProductDetailsComponent,canActivate:[BranchmanagerGuardGuard]},
+  {path:"edit-menu/:id",component:EditMenuComponent},
 
 ];
 

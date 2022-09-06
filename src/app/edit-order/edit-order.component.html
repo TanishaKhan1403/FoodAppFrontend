@@ -1,5 +1,5 @@
 <div class="container">
-    <h4>edit admin here</h4>
+    <h3>Edit Order here</h3>
     <form #addData="ngForm" (ngSubmit)="editOrder(addData)">
       <div class="mb-3">
         <input
@@ -9,7 +9,8 @@
           name="status"
           ngModel
           #status="ngModel"
-          [(ngModel)]="order1.status"
+          placeholder="Enter status"
+          [(ngModel)]="selectedOrder.status"
         />
       </div>
   
@@ -21,7 +22,8 @@
           name="customerName"
           ngModel
           #customerName="ngModel"
-          [(ngModel)]="order1.customerName"
+          placeholder="Enter name"
+          [(ngModel)]="selectedOrder.customerName"
         />
       </div>
   
@@ -33,7 +35,8 @@
           name="orderCreatedTime"
           ngModel
           #orderCreatedTime="ngModel"
-          [(ngModel)]="order1.orderCreatedTime"
+          placeholder="Enter order created time"
+          [(ngModel)]="selectedOrder.orderCreatedTime"
         />
       </div>
   
@@ -44,8 +47,9 @@
           id="orderDeliveryTime"
           name="orderDeliveryTime"
           ngModel
-          #orderCreatedTime="ngModel"
-          [(ngModel)]="order1.orderDeliveryTime"
+          #orderDeliveryTime="ngModel"
+          placeholder="Enter order delivery time"
+          [(ngModel)]="selectedOrder.orderDeliveryTime"
         />
       </div>
       <div class="mb-3">
@@ -56,7 +60,8 @@
           name="customerEmailId"
           ngModel
           #customerEmailId="ngModel"
-          [(ngModel)]="order1.customerEmailId"
+          placeholder="Enter email id"
+          [(ngModel)]="selectedOrder.customerEmailId"
         />
       </div>
       <div class="mb-3">
@@ -67,20 +72,35 @@
           name="contactNumber"
           ngModel
           #contactNumber="ngModel"
-          [(ngModel)]="order1.contactNumber"
+          placeholder="Enter contact number"
+          [(ngModel)]="selectedOrder.contactNumber"
         />
       </div>
       <div class="mb-3">
         <input
-          type="text"
+          type="number"
           class="form-control"
           id="totalPrice"
           name="totalPrice"
           ngModel
           #totalPrice="ngModel"
-          [(ngModel)]="order1.totalPrice"
+          placeholder="Enter total price"
+          [(ngModel)]="selectedOrder.totalPrice"
         />
       </div>
+      <div class="mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="staff"
+          name="staff"
+          ngModel
+          #staff="ngModel"
+          placeholder="Enter staff id"
+          [(ngModel)]="selectedOrder.staff.id"
+        />
+      </div>
+      
   
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

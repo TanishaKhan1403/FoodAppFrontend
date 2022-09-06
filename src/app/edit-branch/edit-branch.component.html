@@ -1,5 +1,5 @@
 <div class="container">
-  <h4>edit admin here</h4>
+  <h4>Edit Branch here</h4>
   <form #addData="ngForm" (ngSubmit)="editBranch(addData)">
     <div class="mb-3">
       <input
@@ -9,7 +9,8 @@
         name="name"
         ngModel
         #name="ngModel"
-        [(ngModel)]="branch1.name"
+        placeholder="Enter name"
+        [(ngModel)]="selectedBranch.name"
       />
     </div>
 
@@ -21,7 +22,8 @@
         name="address"
         ngModel
         #address="ngModel"
-        [(ngModel)]="branch1.address"
+        placeholder="Enter address"
+        [(ngModel)]="selectedBranch.address"
       />
     </div>
 
@@ -33,7 +35,8 @@
         name="phoneNumber"
         ngModel
         #phoneNumber="ngModel"
-        [(ngModel)]="branch1.phoneNumber"
+        placeholder="Enter phone number"
+        [(ngModel)]="selectedBranch.phoneNumber"
       />
     </div>
 
@@ -45,7 +48,20 @@
         name="email"
         ngModel
         #email="ngModel"
-        [(ngModel)]="branch1.email"
+        placeholder="Enter email"
+        [(ngModel)]="selectedBranch.email"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="number"
+        class="form-control"
+        id="admin"
+        name="admin"
+        ngModel
+        #email="ngModel"
+        placeholder="Enter admin id"
+        [(ngModel)]="selectedBranch.admin.id"
       />
     </div>
 

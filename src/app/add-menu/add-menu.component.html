@@ -1,6 +1,19 @@
 <div class="container">
-    <h3>add menu</h3>
+    <h3>Add Menu</h3>
     <form #addData = "ngForm" (ngSubmit)="addMenu(addData)">
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          ngModel
+          #name="ngModel"
+          placeholder="Enter name"
+          [(ngModel)]="menu.name"
+        />
+      </div>
       <div class="mb-3">
         <input
           type="number"

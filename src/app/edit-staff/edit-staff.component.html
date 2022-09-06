@@ -1,5 +1,5 @@
 <div class="container">
-  <h4>edit staff here</h4>
+  <h4>Edit Staff here</h4>
   <form #addData="ngForm" (ngSubmit)="editStaff(addData)">
     <div class="mb-3">
       <input
@@ -37,6 +37,18 @@
         #password="ngModel"
         placeholder="Enter password"
         [(ngModel)]="selectedStaff.password"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="role"
+        name="role"
+        ngModel
+        #role="ngModel"
+        placeholder="Enter role"
+        [(ngModel)]="selectedStaff.role"
       />
     </div>
 

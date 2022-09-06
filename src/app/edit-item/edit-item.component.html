@@ -1,5 +1,5 @@
 <div class="container">
-    <h4>edit admin here</h4>
+    <h3>Edit Item here</h3>
     <form #addData="ngForm" (ngSubmit)="editItem(addData)">
       <div class="mb-3">
         <input
@@ -9,6 +9,8 @@
           name="name"
           ngModel
           #name="ngModel"
+          placeholder="Enter name"
+        [(ngModel)]="selectedItem.name"
          
         />
       </div>
@@ -21,6 +23,8 @@
           name="type"
           ngModel
           #type="ngModel"
+          placeholder="Enter type"
+        [(ngModel)]="selectedItem.type"
         
         />
       </div>
@@ -33,6 +37,8 @@
           name="quantity"
           ngModel
           #quantity="ngModel"
+          placeholder="Enter quantity"
+        [(ngModel)]="selectedItem.quantity"
          
         />
       </div>
@@ -45,6 +51,8 @@
           name="productId"
           ngModel
           #productId="ngModel"
+          placeholder="Enter product id"
+        [(ngModel)]="selectedItem.productId"
          
         />
       </div>
@@ -56,6 +64,8 @@
           name="price"
           ngModel
           #price="ngModel"
+          placeholder="Enter price"
+        [(ngModel)]="selectedItem.price"
           
         />
       </div>
@@ -67,6 +77,8 @@
           name="image"
           ngModel
           #image="ngModel"
+          placeholder="Enter image"
+        [(ngModel)]="selectedItem.image"
           
         />
       </div>
